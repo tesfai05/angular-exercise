@@ -1,6 +1,7 @@
-<p>From Server Component</p>
-<p>{{'server'}} with Id {{serverId}} has status {{getServerStatus()}}</p>
-<button class="btn btn-primary" [disabled]="!addServer" (click)="onCreation()">Add Server </button>
-<!-- <p [innerText]="addServer"></p>
-<p >{{addServer}}</p> -->
-<p>{{creationStatus}}</p>
+
+<p 
+    [ngStyle]="{backgroundColor:getColor()}"
+    [ngClass]="{online:serverStatus==='Online'}"
+    >
+    {{'Server '}} with ID {{serverId}} is {{getServerStatus()}} 
+</p>
